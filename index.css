@@ -1,0 +1,126 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Scoreboard Container */
+.scoreboard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.scoreboard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Teams Layout */
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.team {
+  flex: 1 1 45%;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.team:hover {
+  transform: scale(1.02);
+}
+
+.team h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.score {
+  font-size: 4rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  margin-bottom: 15px;
+}
+
+/* Controls */
+.controls button,
+.timer-controls button,
+.team div button,
+.quarter-controls button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  font-size: 16px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+}
+
+.controls button:hover,
+.timer-controls button:hover,
+.team div button:hover {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+/* Timer Section */
+.timer-section {
+  margin-top: 40px;
+}
+
+.timer {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ff4081;
+  text-shadow: 0 0 10px #ff4081;
+}
+
+.timer-controls {
+  margin-bottom: 20px;
+}
+
+#quarter {
+  font-weight: bold;
+  color: #ffeb3b;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teams {
+    flex-direction: column;
+  }
+
+  .team {
+    width: 100%;
+  }
+}
